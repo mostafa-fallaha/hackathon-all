@@ -2,3 +2,5 @@
     remote = all_remote
 ['remote "all_remote"']
     url = gdrive://1grYJ_witLrp-JP9em5sLT_26oFSQPOBo
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = ../premium-gear-432115-s0-ac5aab81e2ad.json
