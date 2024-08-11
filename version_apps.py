@@ -10,7 +10,7 @@ args = parser.parse_args()
 data_file = "apps/googleplaystore.csv"
 dvc_file = "apps/googleplaystore.csv.dvc"
 gitignore_file = "apps/.gitignore"
-# script_file = "version_data_apps.py"
+
 commit_message = args.commit_message
 
 # Run DVC and Git commands
@@ -20,3 +20,6 @@ subprocess.run(["git", "add", dvc_file, gitignore_file, 'run_versioning.ps1',
 subprocess.run(["git", "commit", "-m", commit_message], check=True)
 subprocess.run(["dvc", "push"], check=True)
 subprocess.run(["git", "push"], check=True)
+
+# Trigger model training
+subprocess.run(["python", "apps/train_models.py"], check=True)
