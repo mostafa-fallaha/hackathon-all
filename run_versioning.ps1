@@ -4,7 +4,7 @@ param (
 )
 
 if (-not $pythonFile -or -not $commitMessage) {
-    Write-Host "Usage: .\run_versioning_apps.ps1 <python_file> <commit_message>"
+    Write-Host "Usage: .\run_versioning.ps1 <python_file> <commit_message>"
     exit 1
 }
 
