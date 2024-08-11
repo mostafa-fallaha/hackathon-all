@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -91,7 +92,10 @@ def tune_random_forest(X, y):
     return grid_search.best_estimator_
 
 if __name__ == "__main__":
-    filepath = 'apps/googleplaystore.csv'
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Construct the full path to the CSV file
+    filepath = os.path.join(current_dir, 'googleplaystore.csv')
 
     print("Loading and processing data...")
     X, y_rating, y_installs = load_and_process_data(filepath)
