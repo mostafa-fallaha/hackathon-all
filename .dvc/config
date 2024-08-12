@@ -3,5 +3,3 @@
 ['remote "all_remote"']
     url = gdrive://1grYJ_witLrp-JP9em5sLT_26oFSQPOBo
     gdrive_use_service_account = true
-    gdrive_service_account_json_file_path = ..\credentials\hackathon-432114-82991a41cf86.json
-
